@@ -25,18 +25,15 @@ const Cricket = React.createClass({
   render() {
     const caption = this.props.cricket.Caption
     var _styles = {
-      display: 'inline-block',
-      width: '20%',
-      height: '25%',
       states: [
         {playing: {fontWeight: 'bold'}}
       ]
     }
     var styles = this.buildStyles(_styles, {playing: this.state.playing})
 
-    return <div style={styles} onClick={this.togglePlay}>
-      <img src={`./images/${caption}.jpg`} style={{maxWidth: '100%', maxHeight: '100%'}} />
-      <p>{caption}</p>
+    return <div className='cns_box' style={styles} onClick={this.togglePlay}>
+      <div className='cns_image_wrap'><img src={`./images/${caption}.jpg`} /></div>
+      <div className='cns_description_wrap'><div><p>{caption}</p></div></div>
       <audio src={`./audio/${caption}.mp3`} loop ref="audio" />
     </div>
   },
