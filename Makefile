@@ -40,6 +40,6 @@ images: cricket-content.csv _images
 
 deploy:
 	webpack
-	rsync -avz index.html audio images build/bundle.js staging:/var/www/crickets/
+	rsync -avz index.html audio images build/bundle.js css staging:/var/www/crickets/
 
 .PHONY: images audio deploy
