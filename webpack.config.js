@@ -6,7 +6,7 @@ module.exports = {
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
     'webpack/hot/only-dev-server',
-    './index' // Your appʼs entry point
+    './src/index'
   ],
   output: {
     path: path.join(__dirname, 'build'),

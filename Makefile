@@ -42,4 +42,8 @@ deploy:
 	webpack
 	rsync -avz index.html audio images build/bundle.js css staging:/var/www/crickets/
 
+deploy-marchetti:
+	webpack
+	rsync -avz index.html marchetti/audio marchetti/images build/bundle.js css staging:/var/www/crickets/marchetti
+
 .PHONY: images audio deploy
