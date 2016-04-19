@@ -1,8 +1,10 @@
 {
-  "about": "The American Period Rooms: Inside/Out",
+  "title": "The American Period Rooms: Inside/Out",
+  "description": "Anthony Marchetti photographed the original sites of five period rooms. Tap a picture to hear him discuss his adventures creating these photos.",
   "soundboard": false,
   "branded": true,
   "things": [
+    {"Caption": "Introduction"},
     {"Caption": "Connecticut Room"},
     {"Caption": "Providence Parlor"},
     {"Caption": "Duluth Room"},

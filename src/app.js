@@ -13,7 +13,8 @@ const App = React.createClass({
     return <div>
       {things.map((c, i) => <Cricket key={i} cricket={c} play={this.play} soundboard={content.soundboard} />)}
       <footer>
-        <h3>{content.about}</h3>
+        <h3>{content.title}</h3>
+        {content.description && <div>{content.description}</div>}
         <span>Tap on an image to listen to the related sound.</span>
       </footer>
       <audio ref="masterAudio" />
