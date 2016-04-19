@@ -46,4 +46,7 @@ deploy-marchetti:
 	webpack
 	rsync -avz index.html marchetti/audio marchetti/images build/bundle.js css staging:/var/www/crickets/marchetti
 
-.PHONY: images audio deploy
+sass:
+	rewatch sass/*.scss -c "sassc -lm sass/chinese-nature-sounds.scss css/chinese-nature-sounds.css"
+
+.PHONY: images audio deploy sass
