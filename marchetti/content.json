@@ -1,6 +1,7 @@
 {
   "about": "The American Period Rooms: Inside/Out",
   "soundboard": false,
+  "branded": true,
   "things": [
     {"Caption": "Connecticut Room"},
     {"Caption": "Providence Parlor"},

@@ -8,6 +8,7 @@ var content = require(`json!../${prefix}/content.json`)
 const App = React.createClass({
   render() {
     const things = content.things.filter(t => !t.hide)
+    const showLogo = content.branded
 
     return <div>
       {things.map((c, i) => <Cricket key={i} cricket={c} play={this.play} soundboard={content.soundboard} />)}
@@ -16,6 +17,7 @@ const App = React.createClass({
         <span>Tap on an image to listen to the related sound.</span>
       </footer>
       <audio ref="masterAudio" />
+      {showLogo && <div className="branded"></div>}
     </div>
   },
 
