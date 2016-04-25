@@ -23,6 +23,12 @@ const App = React.createClass({
 
   previouslyPlayedComponents: [],
 
+  componentDidMount() {
+    this.refs.masterAudio.getDOMNode().addEventListener('ended', () => {
+      this.previouslyPlayedComponents && this.previouslyPlayedComponents.map(c => c.stopPlaying())
+    })
+  },
+
   play(src, callback, subcomponent) {
     this.previouslyPlayedComponents.map(c => c.stopPlaying())
 
