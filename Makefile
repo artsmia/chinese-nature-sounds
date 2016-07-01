@@ -48,7 +48,7 @@ deploy-marchetti:
 
 deploy-soundscapes:
 	webpack
-	rsync -avz --exclude "*.tif" index.html seeing-nature-soundscapes/audio seeing-nature-soundscapes/images build/bundle.js css staging:/var/www/crickets/soundscapes
+	rsync -avz --exclude "*.tif" --exclude="originals/*" index.html soundscapes/audio soundscapes/images build/bundle.js css staging:/var/www/crickets/soundscapes
 
 sass:
 	rewatch sass/*.scss -c "sassc -lm sass/chinese-nature-sounds.scss css/chinese-nature-sounds.css"
