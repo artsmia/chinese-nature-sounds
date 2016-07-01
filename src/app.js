@@ -2,7 +2,8 @@ import React from 'react'
 import { StyleResolverMixin, BrowserStateMixin } from 'radium'
 
 // const prefix = 'crickets'
-const prefix = 'marchetti'
+// const prefix = 'marchetti'
+const prefix = 'seeing-nature-soundscapes'
 var content = require(`json!../${prefix}/content.json`)
 
 const App = React.createClass({

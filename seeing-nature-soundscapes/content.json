@@ -1,0 +1,12 @@
+{
+  "title": "Seeing Nature: Landscape Masterworks soundscapes",
+  "description": "Listen to the art. We have crafted soundscapes to match a selection of paintings in the exhibition. The soundscape numbers on the wall tell you which to select as you move through the galleries. Headphones are recommended, but not necessary.",
+  "soundboard": false,
+  "branded": false,
+  "things": [
+    {"Caption": "La Serenade"},
+    {"Caption": "Canyon"},
+    {"Caption": "Lily Pad"},
+    {"Caption": "Lake Light"}
+  ]
+}
