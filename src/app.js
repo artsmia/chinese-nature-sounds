@@ -30,7 +30,7 @@ const App = React.createClass({
     })
   },
 
-  play(src, callback, subcomponent) {
+  play(src, callback, subcomponent, {title, image}) {
     this.previouslyPlayedComponents.map(c => c.stopPlaying())
 
     var audio = this.refs.masterAudio.getDOMNode()
@@ -41,6 +41,8 @@ const App = React.createClass({
       playing = !this.state.playing
     } else {
       audio.src = src
+      audio.title = title
+      audio.poster = image
       audio.play()
       playing = true
     }
@@ -66,21 +68,34 @@ const Cricket = React.createClass({
     ].join(' ')
 
     return <div className={classes} onClick={this.togglePlay}>
-      <div className='cns_image_wrap'><img src={`../${prefix}/images/${caption}.jpg`} /></div>
+      <div className='cns_image_wrap'><img src={`${prefix}images/${caption}.jpg`} /></div>
       <div className='cns_description_wrap'><div><p>{caption}</p></div></div>
-      <audio src={`./${prefix}/audio/${caption}.mp3`} loop={this.props.soundboard} ref="audio" />
+      <audio
+        src={`${prefix}audio/${caption}.mp3`}
+        loop={this.props.soundboard}
+        title={caption}
+        poster={`${prefix}images/${caption}.jpg`}
+        webkitPlaysinline=""
+        xWebkitAirplay=""
+        ref="audio" />
     </div>
   },
 
   togglePlay() {
     const {soundboard} = this.props
+    const caption = this.props.cricket.Caption
     var audio = this.refs.audio.getDOMNode()
     if(soundboard) {
       this.setState({playing: !this.state.playing})
       this.state.playing ? audio.pause() : audio.play()
     } else {
       // send audio src to master player
-      this.props.play(audio.src, (playing) => this.setState({playing}), this)
+      this.props.play(
+        audio.src,
+        (playing) => this.setState({playing}),
+        this,
+        {title: caption, image: `${prefix}images/${caption}.jpg`}
+      )
     }
   },
 
