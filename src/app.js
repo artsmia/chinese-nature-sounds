@@ -16,7 +16,7 @@ const App = React.createClass({
         <h3>{content.title}</h3>
         {content.description && <div>{content.description}</div>}
       </header>
-      {things.map((c, i) => <Cricket key={i} cricket={c} play={this.play} soundboard={content.soundboard} />)}
+      {things.map((c, i) => <Cricket index={i} key={i} cricket={c} play={this.play} soundboard={content.soundboard} />)}
       <audio ref="masterAudio" />
       {showLogo && <div className="branded"></div>}
     </div>
@@ -62,6 +62,7 @@ const Cricket = React.createClass({
 
   render() {
     const caption = this.props.cricket.Caption
+    const name = this.props.index+1 + " – " + caption
     var classes = [
       'cns_box',
       this.state.playing ? 'playing' : 'paused',
@@ -69,7 +70,7 @@ const Cricket = React.createClass({
 
     return <div className={classes} onClick={this.togglePlay}>
       <div className='cns_image_wrap'><img src={`${prefix}images/${caption}.jpg`} /></div>
-      <div className='cns_description_wrap'><div><p>{caption}</p></div></div>
+      <div className='cns_description_wrap'><div><p>{name}</p></div></div>
       <audio
         src={`${prefix}audio/${caption}.mp3`}
         loop={this.props.soundboard}
