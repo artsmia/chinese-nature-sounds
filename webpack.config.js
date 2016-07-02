@@ -14,6 +14,7 @@ module.exports = {
     publicPath: ''
   },
   plugins: [
+    new webpack.EnvironmentPlugin(['NODE_ENV', 'playlist']),
     new webpack.HotModuleReplacementPlugin(),
   ],
   resolve: {

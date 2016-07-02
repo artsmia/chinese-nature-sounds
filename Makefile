@@ -38,17 +38,12 @@ images: cricket-content.csv _images
 		fi; \
 	done
 
+playlist = crickets
+path = "staging:/var/www/crickets/$(playlist)/"
 deploy:
-	webpack
-	rsync -avz index.html audio images build/bundle.js css staging:/var/www/crickets/
-
-deploy-marchetti:
-	webpack
-	rsync -avz index.html marchetti/audio marchetti/images build/bundle.js css staging:/var/www/crickets/marchetti
-
-deploy-soundscapes:
-	webpack
-	rsync -avz --exclude "*.tif" --exclude="originals/*" index.html soundscapes/audio soundscapes/images build/bundle.js css staging:/var/www/crickets/soundscapes
+	NODE_ENV=production playlist=$(playlist) webpack
+	path=$$(echo "$(path)" | sed 's|/crickets/crickets/|/crickets/|'); \
+	rsync -avz index.html $(playlist)/audio $(playlist)/images build/bundle.js css $$path
 
 sass:
 	rewatch sass/*.scss -c "sassc -lm sass/chinese-nature-sounds.scss css/chinese-nature-sounds.css"

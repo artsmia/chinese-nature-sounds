@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleResolverMixin, BrowserStateMixin } from 'radium'
 
-// const prefix = 'crickets'
-// const prefix = 'marchetti'
-const prefix = 'soundscapes'
-var content = require(`json!../${prefix}/content.json`)
+// crickets, marchetti, soundscapes, …
+const playlist = process.env.playlist || 'crickets'
+const prefix = process.env.NODE_ENV == 'production' ? '' : `../${playlist}/`
+var content = require(`json!../${playlist}/content.json`)
 
 const App = React.createClass({
   render() {
