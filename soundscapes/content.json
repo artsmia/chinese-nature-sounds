@@ -1,12 +1,12 @@
 {
   "title": "Seeing Nature: Landscape Masterworks soundscapes",
-  "description": "Besides seeing nature, you can hear it, too! As you come upon certain paintings in the galleries, look for the nearby soundscape number on the wall. Select the sounds with that number.",
+  "description": "In addition to seeing nature, you can hear it, too. Look for the soundscape number on the wall. Select that number to hear a custom soundscape.\n\nFor the enjoyment of others, earbuds are recommended.",
   "soundboard": false,
   "branded": false,
   "things": [
-    {"Caption": "La Serenade"},
-    {"Caption": "Canyon"},
-    {"Caption": "Lily Pad"},
+    {"Caption": "Venice", "file": "La Serenade"},
+    {"Caption": "Grand Canyon", "file": "Canyon"},
+    {"Caption": "The Water-Lily Pond", "file": "Lily Pad"},
     {"Caption": "Lake Light"}
   ]
 }

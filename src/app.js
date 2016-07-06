@@ -62,6 +62,7 @@ const Cricket = React.createClass({
 
   render() {
     const caption = this.props.cricket.Caption
+    const file = this.props.cricket.file
     const name = this.props.index+1 + " – " + caption
     var classes = [
       'cns_box',
@@ -69,10 +70,10 @@ const Cricket = React.createClass({
     ].join(' ')
 
     return <div className={classes} onClick={this.togglePlay}>
-      <div className='cns_image_wrap'><img src={`${prefix}images/${caption}.jpg`} /></div>
+      <div className='cns_image_wrap'><img src={`${prefix}images/${file || caption}.jpg`} /></div>
       <div className='cns_description_wrap'><div><p>{name}</p></div></div>
       <audio
-        src={`${prefix}audio/${caption}.mp3`}
+        src={`${prefix}audio/${file || caption}.mp3`}
         loop={this.props.soundboard}
         title={caption}
         poster={`${prefix}images/${caption}.jpg`}
