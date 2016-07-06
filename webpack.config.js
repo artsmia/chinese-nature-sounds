@@ -1,7 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 
-module.exports = {
+var development = {
   devtool: 'eval',
   entry: [
     'webpack-dev-server/client?http://0.0.0.0:3000', // WebpackDevServer host and port
@@ -28,3 +28,23 @@ module.exports = {
     }]
   }
 }
+
+// clone the dev configuration, split out the source map, and remove
+// webpack-dev-server and hot reloading
+var production = Object.assign(
+  {},
+  development,
+  {
+    devtool: 'cheap-module-source-map',
+    plugins: [
+      new webpack.EnvironmentPlugin(['NODE_ENV', 'playlist']),
+    ],
+    entry: [
+      './src/index',
+    ]
+  }
+)
+
+module.exports = process.env.NODE_ENV == 'production' ?
+  production :
+  development
