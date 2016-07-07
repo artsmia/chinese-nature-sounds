@@ -9,11 +9,15 @@ const App = React.createClass({
   render() {
     const things = content.things.filter(t => !t.hide)
     const showLogo = content.branded
+    const description = content.description && content.description
+      .split(/\n+/)
+      .map(p => `<p>${p}</p>`)
+      .join('\n')
 
     return <div>
       <header>
         <h3>{content.title}</h3>
-        {content.description && <div>{content.description}</div>}
+        {description && <div dangerouslySetInnerHTML={{__html: description}}></div>}
       </header>
       {things.map((c, i) =>
         <Cricket
