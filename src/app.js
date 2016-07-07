@@ -1,5 +1,4 @@
 import React from 'react'
-import { StyleResolverMixin, BrowserStateMixin } from 'radium'
 
 // crickets, marchetti, soundscapes, …
 const playlist = process.env.playlist || 'crickets'
@@ -54,8 +53,6 @@ const App = React.createClass({
 })
 
 const Cricket = React.createClass({
-  mixins: [StyleResolverMixin, BrowserStateMixin],
-
   getInitialState() {
     return {playing: false}
   },
