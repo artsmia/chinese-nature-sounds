@@ -24,7 +24,7 @@ var development = {
     loaders: [{
       test: /\.jsx?$/,
       loaders: ['react-hot', 'babel'],
-      exclude: /node_modules/
+      include: /src/
     }]
   }
 }

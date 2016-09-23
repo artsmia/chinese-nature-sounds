@@ -6,7 +6,7 @@
   "things": [
     {"Caption": "Venice", "file": "La Serenade"},
     {"Caption": "Grand Canyon", "file": "Canyon"},
-    {"Caption": "The Water-Lily Pond", "file": "Lily Pad"},
+    {"Caption": "Water-Lily Pond", "file": "Lily Pad"},
     {"Caption": "Lake Light"}
   ]
 }
