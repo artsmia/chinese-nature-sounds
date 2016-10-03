@@ -1,0 +1,16 @@
+{
+  "title": "Haunted Mia: Audio tour explores the museum's spooky tales",
+  "description": "Ghost stories about Mia's building, artworks, and period rooms abound among Mia's staff and visitors. We collected the best. To listen in, go to the location listed on the picture and tap to begin.\n\nFor the enjoyment of others, earbuds are recommended.",
+  "soundboard": false,
+  "branded": false,
+  "things": [
+    {"Caption": "Third Floor Corridor", "file": "Helpful Hallway Lights_Third Floor"},
+    {"Caption": "Mrs. T, Gallery 361", "file": "The Ghost of Mrs. T_Gallery 361"},
+    {"Caption": "Gallery 333", "file": "The Late Visitor_Period Room Court"},
+    {"Caption":	"Queen Anne Room, Gallery 326", "file": "The Shadow in the Hat_Queen Anne Room"},
+    {"Caption": "The Georgian Room, Gallery 327", "file": "Ghostly Creeks_Georgian Room"},
+    {"Caption": "The Tudor Room, Gallery 325", "file": "Tudor Room Group_02"},
+    {"Caption": "The CT Room, Gallery 331", "file": "Connecticut Room Group"},
+    {"Caption": "Third Floor Rotunda", "file": "The Red Sweater Man_Rotunda"}
+  ]
+}
