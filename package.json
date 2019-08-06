@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"start": "webpack-dev-server"
   },
   "author": "",
   "license": "MIT",
@@ -13,10 +14,11 @@
     "babel-loader": "^4.1.0",
     "react-hot-loader": "^1.2.2",
     "webpack": "^1.7.2",
+    "webpack-cli": "^2.0.15",
     "webpack-dev-server": "^1.7.0"
   },
   "dependencies": {
-    "json-loader": "^0.5.1",
+    "json-loader": "0.5.4",
     "radium": "^0.10.2",
     "react": "^0.13.0"
   }

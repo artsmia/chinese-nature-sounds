@@ -41,7 +41,7 @@ images: cricket-content.csv _images
 playlist = crickets
 path = "staging:/var/www/crickets/$(playlist)/"
 deploy:
-	NODE_ENV=production playlist=$(playlist) webpack --progress -p
+	NODE_ENV=production playlist=$(playlist) ./node_modules/.bin/webpack --progress -p
 	path=$$(echo "$(path)" | sed 's|/crickets/crickets/|/crickets/|'); \
 	rsync -avz index.html $(playlist)/audio $(playlist)/images build/bundle.js css $$path
 

@@ -44,7 +44,7 @@ header span{
 }
 
 .cns_image_wrap{
-  height:10em;
+  height:7em;
   max-height:10em;
   display:table-cell;
   vertical-align: middle;
@@ -93,7 +93,7 @@ header span{
 }
 
 .paused, .playing {
-  position: relative; 
+  position: relative;
 
   &::before {
     display: inline-block;
@@ -109,7 +109,7 @@ header span{
     padding: 0 5px 0 0;
     opacity: 0.9;
     position: absolute;
-    top: 30%;
+    top: 19%;
     left: 35%;
   }
 }
