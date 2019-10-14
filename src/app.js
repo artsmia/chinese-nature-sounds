@@ -3,8 +3,8 @@ import React from 'react'
 // crickets, marchetti, soundscapes, haunted-mia, …
 // const playlist = process.env.playlist || 'haunted-mia'
 // var content = require(`json!../${playlist}/content.json`) // <-- this line absolutely kills webpack, why?
-const playlist = 'haunted-mia'
-var content = require(`json!../haunted-mia/content.json`)
+const playlist = 'kiddush'
+var content = require(`json!../kiddush/content.json`)
 const prefix = process.env.NODE_ENV == 'production' ? '' : `../${playlist}/`
 
 const App = React.createClass({

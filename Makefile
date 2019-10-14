@@ -38,7 +38,7 @@ images: cricket-content.csv _images
 		fi; \
 	done
 
-playlist = crickets
+playlist = kiddush
 path = "staging:/var/www/crickets/$(playlist)/"
 deploy:
 	NODE_ENV=production playlist=$(playlist) ./node_modules/.bin/webpack --progress -p
